@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'brawls';
+  src: url('../font/brawls.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rift';
+  src: url('../font/rift.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gotham_thin';
+  src: url('../font/gotham_thin.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gotham_med';
+  src: url('../font/gotham_med.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'brawls', sans-serif;
+}
+
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #03a9f4;
+  mix-blend-mode: overlay;
+}
+
+.s2-txt1 {
+  font-family: gotham_med;
+  font-size: 12px;
+  line-height: 1;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.l2-txt1 {
+  font-family: rift;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.size1 {
+  width: 100%;
+}
+
+.size2 {
+  width: 100px;
+  height: 100px;
+}
+
+.bor1{
+  /* border: 1px solid rgba(255, 255, 255, 0.452); */
+  border-radius: 15%;
+  transition: 0.5s;
+}
+
+.bor1:hover{
+  border: 0px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 15px #00000018;
+  transition: 0.5s;
+}
+
+.bor1:hover > .s2-txt1,
+.bor1:hover > .l2-txt1 {
+  color: rgb(90, 90, 90);
+  transition: 0.5s;
+}
+
+.overlay1 {
+  position: relative;
+  top: 250px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1680px){
+
+}
+
+@media only screen and (max-width: 1366px){
+
+}
+
+@media only screen and (max-width: 1360px){
+
+}
+
+@media only screen and (max-width: 1280px){
+
+}
+
+@media only screen and (max-width: 1024px){
+
+}
+
+@media only screen and (max-width: 800px){
+
+}
+
+@media only screen and (max-width:767px){
+  
+}
