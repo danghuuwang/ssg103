@@ -1,60 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NO1 SSG103 Project</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/util.css">
 </head>
+
+
 <body>
-  <section class="showcase">
-    <video src="vid/intro.mp4" muted loop autoplay></video>
+
+  <!-- --------------------------------------------------------
+  --------------------------------------------------------
+  -------------------------------------------------------- -->
+  <!-- SECTION 1 -->
+  <section class="section1">
+
+    <!-- Video background -->
+    <video controls preload="metadata" src="vid/intro.mp4" muted loop autoplay></video>
+
+    <!-- Overlay color for video -->
     <div class="overlay"></div>
+
+    <!-- Countdown system -->
     <div class="size1 overlay1">
-      <div class="size1 flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-50">
-        <div class="flex-w flex-c-m cd100 p-b-33">
-          <div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-            <span class="l2-txt1 p-b-9 days">35</span>
-            <span class="s2-txt1">Days</span>
+      <div class="size1">
+        <div class="flex-c-m cd100">
+          <div class="flex-col-c-m size2 bor1">
+            <span class="date days">0</span>
+            <span class="type">Days</span>
           </div>
   
-          <div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-            <span class="l2-txt1 p-b-9 hours">17</span>
-            <span class="s2-txt1">Hours</span>
+          <div class="flex-col-c-m size2 bor1">
+            <span class="date hours">0</span>
+            <span class="type">Hours</span>
           </div>
   
-          <div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-            <span class="l2-txt1 p-b-9 minutes">50</span>
-            <span class="s2-txt1">Minutes</span>
+          <div class="flex-col-c-m size2 bor1">
+            <span class="date minutes">0</span>
+            <span class="type">Minutes</span>
           </div>
   
-          <div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-            <span class="l2-txt1 p-b-9 seconds">39</span>
-            <span class="s2-txt1">Seconds</span>
+          <div class="flex-col-c-m size2 bor1">
+            <span class="date seconds">0</span>
+            <span class="type">Seconds</span>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <link rel="stylesheet" href="./js/main.js" />
+
+  <!-- --------------------------------------------------------
+  --------------------------------------------------------
+  -------------------------------------------------------- -->
+  <!-- SECTION 2 -->
+  <section class="section2">
+
+    <div class="big-title center">
+      <h1>Member</h1>
+    </div>
+    <div class="line"></div>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+
+        <!-- Trần Bá Hậu -->
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="card">
+              <div >
+                <img src="img/hau.jpg" alt="" style="width: 550px;">
+              </div>
+              <div class="member-title">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>Hau Tran Ba<br><span>Actor
+                  </span></h3>
+                </div>
+                <ul class="sci">
+                  <li style="--i:1;"><a href="https://www.facebook.com/tranbahau24/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li style="--i:2;"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nguyễn Thái Bảo -->
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="card">
+              <div>
+                <img src="img/bao.jpg" alt="" style="position: relative; left: 30px; width: 400px;">
+              </div>
+              <div class="member-title">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>Bao Nguyen Thai<br><span>Actor
+                  </span></h3>
+                </div>
+                <ul class="sci">
+                  <li style="--i:1;"><a href="https://www.facebook.com/ntbao37/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li style="--i:2;"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nguyễn Hoàng Long -->
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="card">
+              <div class="imgBx1" style="width: 10%">
+                <img src="img/long.jpeg" alt="">
+              </div>
+              <div class="member-title">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>Long Nguyen Hoang<br><span>Actor
+                  </span></h3>
+                </div>
+                <ul class="sci">
+                  <li style="--i:1;"><a href="https://www.facebook.com/MemberOfHoangLong/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li style="--i:2;"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Đặng Hữu Quang -->
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="card">
+              <div class="imgBx">
+                <img src="img/quang.jpg" alt="">
+              </div>
+              <div class="member-title">
+                <i class="fa fa-flag" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>Quang Dang Huu<br><span>Director
+                  </span></h3>
+                </div>
+                <ul class="sci">
+                  <li style="--i:1;"><a href="https://www.facebook.com/danghuuwang/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li style="--i:2;"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nguyễn Võ Huỳnh Hiệp -->
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="card">
+              <div class="imgBx">
+                <img src="img/hiep.jpg" alt="" style="position: relative; right: 10px; width: 550px;">
+              </div>
+              <div class="member-title">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>Hiep Nguyen Vo Huynh<br><span>Actor
+                  </span></h3>
+                </div>
+                <ul class="sci">
+                  <li style="--i:1;"><a href="https://www.facebook.com/profile.php?id=100012893702946" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li style="--i:2;"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hà Thị Thuỳ Mến -->
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="card">
+              <div class="imgBx">
+                <img src="img/men.jpg" alt="" style="position: relative; right: -10px; width: 600px;">
+              </div>
+              <div class="member-title">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>Men Ha Thi Thuy<br><span>Actor
+                  </span></h3>
+                </div>
+                <ul class="sci">
+                  <li style="--i:1;"><a href="https://www.facebook.com/ha.men.26.2/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li style="--i:2;"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hồ Quốc Bảo Huy -->
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="card">
+              <div class="imgBx">
+                <img src="img/huy.jpg" alt="" style="position: relative; right: 100px; top: 50px; width: 500px;">
+              </div>
+              <div class="member-title">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>Huy Ho Quoc Bao<br><span>Actor
+                  </span></h3>
+                </div>
+                <ul class="sci">
+                  <li style="--i:1;"><a href="https://www.facebook.com/huybanhe1998/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li style="--i:2;"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="vendor/countdowntime/moment.min.js"></script>
 	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
 	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
 	<script src="vendor/countdowntime/countdowntime.js"></script>
-	<script>
-		$('.cd100').countdown100({
-			endtimeYear: 2021,
-			endtimeMonth: 3,
-			endtimeDate: 8,
-			endtimeHours: 19,
-			endtimeMinutes: 0,
-			endtimeSeconds: 0,
-			timeZone: "Asia/Ho_Chi_Minh" 
-		});
-	</script>
+  <script src="js/main.js"></script>
 </body>
 </html>
   

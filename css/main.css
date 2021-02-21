@@ -33,9 +33,9 @@
   font-family: 'brawls', sans-serif;
 }
 
-.showcase
+.section1
 {
-  position: absolute;
+  position: relative;
   right: 0;
   width: 100%;
   min-height: 100vh;
@@ -48,7 +48,7 @@
   z-index: 2;
 }
 
-.showcase video
+.section1 video
 {
   position: absolute;
   top: 0;
@@ -66,11 +66,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #03a9f4;
-  mix-blend-mode: overlay;
+  background-image: linear-gradient(to top, #111 0%, #ffffff00);
 }
 
-.s2-txt1 {
+.type {
   font-family: gotham_med;
   font-size: 12px;
   line-height: 1;
@@ -79,12 +78,13 @@
   transition: 0.5s;
 }
 
-.l2-txt1 {
+.date {
   font-family: rift;
   font-size: 40px;
   font-weight: bold;
   line-height: 1;
   color: #fff;
+  margin-bottom: 5px;
   transition: 0.5s;
 }
 
@@ -98,8 +98,8 @@
 }
 
 .bor1{
-  /* border: 1px solid rgba(255, 255, 255, 0.452); */
   border-radius: 15%;
+  margin: 10px;
   transition: 0.5s;
 }
 
@@ -107,18 +107,19 @@
   border: 0px;
   background-color: #ffffff;
   box-shadow: 4px 4px 15px #00000018;
+  transform: translateY(-20px);
   transition: 0.5s;
 }
 
-.bor1:hover > .s2-txt1,
-.bor1:hover > .l2-txt1 {
+.bor1:hover > .type,
+.bor1:hover > .date {
   color: rgb(90, 90, 90);
   transition: 0.5s;
 }
 
 .overlay1 {
   position: relative;
-  top: 250px;
+  top: 300px;
   z-index: 1;
 }
 
@@ -148,4 +149,186 @@
 
 @media only screen and (max-width:767px){
   
+}
+
+.section2 {
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.line {
+  display: block;
+  border: 3px solid white;
+  border-radius: 10px;
+  width: 80px;
+  margin: auto;
+}
+
+.big-title {
+  padding-top: 50px;
+}
+
+.big-title h1{
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 280px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card .member-title {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.438);
+  box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+  line-height: 55px;
+  text-align: center;
+  vertical-align: bottom;
+  transition: 0.5s;
+}
+
+.container .card:hover > .member-title {
+  transform: translateY(-80px);
+  transition: 0.5s;
+}
+
+.container .card .content {
+  position: absolute;
+  bottom: -140px;
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+  transition: 0.5s;
+}
+
+.container .card:hover .content {
+  bottom: 0;
+}
+
+.container .card .content .contentBx h3 {
+  color: #fff;
+  font-family: gotham_thin;
+  text-align: center;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition-delay: 0.3s;
+}
+
+.container .card:hover .content .contentBx h3 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.container .card .content .contentBx h3 span {
+  font-family: gotham_thin;
+  text-align: center;
+  font-size: 80%;
+  font-weight: 300;
+  text-transform: initial;
+  transition: 0.5s;
+}
+
+.container .card .content .sci {
+  position: relative;
+  top: 12px;
+  display: flex;
+}
+
+.container .card .content .sci li{
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.container .card:hover .content .sci li{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.container .card .content .sci li a{
+  color: #fff;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.container .card .content .sci li a:hover {
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+.container .card .imgBx img {
+  width: 410px;
+}
+
+.container .card .imgBx1 img {
+  position: relative;
+  left: -250px;
+  width: 610px;
+}
+
+.container .card img {
+  filter: brightness(80%);
+  transition: 0.3s;
+}
+
+
+.swiper-slide2 {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  border: 1px solid red;
 }
