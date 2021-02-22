@@ -33,6 +33,10 @@
   font-family: 'brawls', sans-serif;
 }
 
+
+/*--------------------------------------------------------
+--------------------------------------------------------
+-------------------------------------------------------- SECTION 1*/
 .section1
 {
   position: relative;
@@ -45,7 +49,6 @@
   align-items: center;
   background: #111;
   transition: 0.5s;
-  z-index: 2;
 }
 
 .section1 video
@@ -107,7 +110,7 @@
   border: 0px;
   background-color: #ffffff;
   box-shadow: 4px 4px 15px #00000018;
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   transition: 0.5s;
 }
 
@@ -119,46 +122,22 @@
 
 .overlay1 {
   position: relative;
-  top: 300px;
+  top: 250px;
   z-index: 1;
 }
 
-@media only screen and (max-width: 1680px){
 
-}
-
-@media only screen and (max-width: 1366px){
-
-}
-
-@media only screen and (max-width: 1360px){
-
-}
-
-@media only screen and (max-width: 1280px){
-
-}
-
-@media only screen and (max-width: 1024px){
-
-}
-
-@media only screen and (max-width: 800px){
-
-}
-
-@media only screen and (max-width:767px){
-  
-}
-
+/*--------------------------------------------------------
+--------------------------------------------------------
+-------------------------------------------------------- SECTION 3*/
 .section2 {
   position: relative;
   right: 0;
   width: 100%;
-  min-height: 100vh;
   justify-content: space-between;
   align-items: center;
   background: #111;
+  padding: 50px 0px;
   transition: 0.5s;
   z-index: 2;
 }
@@ -169,10 +148,31 @@
   border-radius: 10px;
   width: 80px;
   margin: auto;
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .big-title {
-  padding-top: 50px;
+  padding: 10px;
+  width: 300px;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.big-title:hover{
+  background: #ffffff;
+  box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 10px #ffffff;
+  transition: 0.3s;
+}
+
+.big-title:hover > h1{
+  color: #111;
+  transition: 0.3s;
+}
+
+.big-title:hover + .line{
+  opacity: 0;
+  transition: 0.3s;
 }
 
 .big-title h1{
@@ -180,6 +180,7 @@
   text-align: center;
   font-size: 50px;
   letter-spacing: 2px;
+  transition: 0.3s;
 }
 
 .swiper-container {
@@ -231,6 +232,33 @@
 
 .container .card:hover > .member-title {
   transform: translateY(-80px);
+  transition: 0.5s;
+}
+
+.container .card .more-info {
+  position: absolute;
+  width: 50%;
+  top: -30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.438);
+  box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+  color: #111;
+  line-height: 55px;
+  text-align: center;
+  vertical-align: bottom;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .card .more-info:hover {
+  background-color: rgba(92, 92, 92, 0.438);
+}
+
+.container .card:hover > .more-info {
+  transform: translateY(60px);
+  opacity: 1;
   transition: 0.5s;
 }
 
@@ -331,4 +359,257 @@
   width: 100%;
   height: 300px;
   border: 1px solid red;
+}
+
+.popup-style {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.384);
+  width: 450px;
+  padding: 50px 50px 50px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+  transition: 0.5s;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  visibility: hidden;
+}
+
+.popup-style .member-avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.popup-style .member-avatar img{
+  width: 150px;
+  border-radius: 50%;
+  border: 8px solid #00000018;
+  margin-bottom: 20px;
+}
+
+.popup-style .member-info {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-style .member-info p{
+  font-family: Calibri;
+  font-size: 20px;
+  font-weight: 10px;
+  text-align: justify;
+  padding-top: 20px;
+}
+
+.popup-style .sci {
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-style .sci li{
+  list-style: none;
+  margin: 0 15px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.popup-style .sci li{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.popup-style .sci li a{
+  color: #111;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.popup-style li a:hover {
+  padding: 0 20px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.popup-style .member-info h3 {
+  color: #111;
+  font-family: brawls;
+  font-size: 200%;
+  text-align: center;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition-delay: 0.3s;
+}
+
+.popup-style .member-info h3 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.popup-style .member-info h3 span {
+  font-family: rift;
+  text-align: center;
+  font-size: 80%;
+  font-weight: 300;
+  text-transform: initial;
+  transition: 0.5s;
+}
+
+.popup-style .close-btn {
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+}
+
+.popup-style .close-btn i {
+  position: relative;
+  color: #111;
+  top: 12px;
+  cursor: pointer;
+}
+
+#popup1.active {
+  visibility: visible;
+  top: 50%;
+}
+
+#popup2.active {
+  visibility: visible;
+  top: 50%;
+}
+
+#popup3.active {
+  visibility: visible;
+  top: 50%;
+}
+
+#popup4.active {
+  visibility: visible;
+  top: 50%;
+}
+
+#popup5.active {
+  visibility: visible;
+  top: 50%;
+}
+
+#popup6.active {
+  visibility: visible;
+  top: 50%;
+}
+
+#popup7.active {
+  visibility: visible;
+  top: 50%;
+}
+
+/*--------------------------------------------------------
+--------------------------------------------------------
+-------------------------------------------------------- SECTION 3*/
+.section3 {
+  position: relative;
+  right: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background: #111;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.section3 h2 {
+  font-family: rift;
+  color: #fff;
+  font-size: 60px;
+  letter-spacing: 30px;
+  padding: 0px 40px;
+}
+
+.section3 p {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+  color: #fff;
+  font-size: 15px;
+  padding: 0px 80px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+
+@media only screen and (max-width: 1680px){
+
+}
+
+@media only screen and (max-width: 1366px){
+
+}
+
+@media only screen and (max-width: 1360px){
+
+}
+
+@media only screen and (max-width: 1280px){
+  .section3 h2 {
+    font-size: 40px;
+    letter-spacing: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+
+}
+
+@media only screen and (max-width: 800px){
+  .section3 h2 {
+    font-size: 30px;
+    letter-spacing: 20px;
+  }
+  .section3 p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width:450px){
+  .popup-style {
+    width: 350px;
+    padding: 50px 20px 50px;
+  }
+
+  .overlay1 {
+    top: 170px;
+  }
+
+  .section3 h2 {
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+}
+
+@media only screen and (max-width:350px){
+  .popup-style {
+    width: 300px;
+    padding: 30px 20px 30px;
+  }
+
+  .section3 h2 {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
 }
