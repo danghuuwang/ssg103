@@ -25,6 +25,8 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
+swiper.slideTo(3, false,false);
+
 function popupToggle1() {
   const popup = document.getElementById('popup1');
   popup.classList.toggle('active');
