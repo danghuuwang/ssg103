@@ -552,6 +552,22 @@
   text-align-last: center;
 }
 
+.section3 h3 {
+  font-family: brawls;
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+.qrcode {
+  padding-top: 100px;
+  width: 200px;
+  transition: 0.5s;
+}
+
+.qr-btn:hover > .qrcode {
+  width: 15%;
+}
 
 @media only screen and (max-width: 1680px){
 
